@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f5f8;
+    color: #222;
+}
+
+header {
+    background: #17365d;
+    color: white;
+    padding: 24px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header p {
+    margin: 6px 0 0;
+    color: #d8e3f0;
+}
+
+.status {
+    background: #285486;
+    padding: 9px 16px;
+    border-radius: 6px;
+}
+
+main {
+    max-width: 1400px;
+    margin: 25px auto;
+    padding: 0 20px;
+}
+
+.statystyki {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.karta,
+.panel {
+    background: white;
+    border-radius: 9px;
+    padding: 22px;
+    box-shadow: 0 2px 8px #0000000a;
+}
+
+.karta span {
+    display: block;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.karta strong {
+    font-size: 30px;
+    color: #17365d;
+}
+
+.panel {
+    margin-bottom: 22px;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 0 0 18px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+input {
+    min-width: 0;
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #d5dbe3;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: 2px solid #9dbce0;
+    border-color: #285486;
+}
+
+button {
+    background: #17365d;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    padding: 11px 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #285486;
+}
+
+form button {
+    grid-column: span 4;
+}
+
+.naglowek {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.naglowek h2 {
+    margin: 0;
+}
+
+.naglowek input {
+    max-width: 300px;
+}
+
+.tabela {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th,
+td {
+    padding: 13px 10px;
+    border-bottom: 1px solid #e8ebef;
+    text-align: left;
+    white-space: nowrap;
+}
+
+th {
+    background: #f6f8fa;
+    color: #555;
+}
+
+.malo {
+    color: #c0392b;
+    font-weight: bold;
+}
+
+.akcje {
+    display: flex;
+    gap: 5px;
+}
+
+.maly {
+    padding: 7px 10px;
+}
+
+.edytuj {
+    background: #64748b;
+}
+
+.usun {
+    background: #c0392b;
+}
+
+@media (max-width: 800px) {
+    form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    form button {
+        grid-column: span 2;
+    }
+
+    .statystyki {
+        grid-template-columns: 1fr;
+    }
+
+    .naglowek {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .naglowek input {
+        max-width: none;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    main {
+        padding: 0 12px;
+    }
+
+    .panel {
+        padding: 15px;
+    }
+}
